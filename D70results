@@ -1,0 +1,5 @@
+#!/bin/bash
+# Make sure local repo is updated before building
+cd /usr/src/backports/wheezy/
+dpkg-scanpackages . /dev/null > Packages
+apt-get update
