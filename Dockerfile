@@ -16,7 +16,7 @@ RUN chmod 755 /usr/src/backports/wheezy/D70results
 # Create initial environment
 RUN pbuilder --create --basetgz /var/cache/pbuilder/base-wheezy-bpo.tar.gz \
              --distribution wheezy \
-             --othermirror "deb http://security.debian.org/ wheezy/updates main|deb http://http.debian.net/debian wheezy-backports main|deb [trusted=yes] file:///usr/src/backports/wheezy ./" \
+             --othermirror "deb http://security.debian.org/ wheezy/updates main|deb http://deb.debian.org/debian wheezy-backports main|deb [trusted=yes] file:///usr/src/backports/wheezy ./" \
              --bindmounts /usr/src/backports/wheezy/
 
 # Add source for 'apt-get source'
